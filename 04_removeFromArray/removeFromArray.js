@@ -1,10 +1,12 @@
 const removeFromArray = function(arrayToCull, ...valuesToRemove) {
 
+    //Array to hold the values that we wanted to skip
     let culledArray = Array();
 
     cullArray:
     for(let i = 0; i < arrayToCull.length; i++){
         for(let j = 0; j < valuesToRemove.length; j++){
+            //if the arrayToCull value is strictly equal to the value to remove, skip pushing it to the new array
             if(arrayToCull[i] === valuesToRemove[j]) continue cullArray;
         }
     
